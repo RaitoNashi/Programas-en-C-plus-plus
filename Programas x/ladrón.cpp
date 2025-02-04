@@ -64,9 +64,19 @@ void MaquinaJugadora(){
 
     cout <<"Let's play" << endl;
     for(int i=0; i<5; i++){
+
         cout<<"Elige un valor entre 0 y 1: "<<endl;
         cin>>Elecciones[i];
-        EleccionMaq = rand() % 2;
+
+        if(Elecciones[i-1] == 1){
+            EleccionMaq = 1;
+        }
+        else if(Elecciones[i-1] == 0){
+            EleccionMaq = 0;
+        }
+        else{
+            EleccionMaq = 0;
+        }
 
         if(Elecciones[i] == 1 && EleccionMaq == 1){
             PuntuacionJugador += 1;
@@ -82,6 +92,7 @@ void MaquinaJugadora(){
             PuntuacionJugador +=3;
             PuntuacionMaquina +=3;
         }
+
     }
 
     if(PuntuacionJugador > PuntuacionMaquina){
