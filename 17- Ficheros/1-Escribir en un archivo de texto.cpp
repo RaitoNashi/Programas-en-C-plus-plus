@@ -15,7 +15,7 @@ int main(){
 void escribir(){
     ofstream archivo; /*La O de output*/
 
-    archivo.open("probando.txt",ios::out); //abriendo el archivo
+    archivo.open("c://Users//raito//Documents//GitHub//Programas-en-C-plus-plus//17- Ficheros//Probando.txt",ios::out); //abriendo el archivo
 
     if(archivo.fail()){ //Devuelve true o false dependiendo de si se pudo abrir o crear el archivo
         cout<<"No se pudo abrir el archivo";
